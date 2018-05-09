@@ -16,22 +16,15 @@ Run a simple Csharp sample on faytech-101J1900CAP device running Win 10 Pro
 -   [Step 3: Build and Run the Sample](#Build)
 -   [Next Steps](#NextSteps)
 
-# Instructions for using this template
-
--   Replace the text in {placeholders} with correct values.
--   Delete the lines {{enclosed}} after following the instructions enclosed between them.
--   It is advisable to use external links, wherever possible.
--   Remove this section from final document.
-
 <a name="Introduction"></a>
 # Introduction
 
 **About this document**
 
-This document describes how to connect {enter your device name here} device running {enter the OS name running on device} with Azure IoT SDK. This multi-step process includes:
+This document describes how to connect faytech-101J1900CAP device running Windows 10 Pro with Azure IoT SDK. This multi-step process includes:
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
--   Build and deploy Azure IoT SDK on device
+-   Deploy Azure IoT SDK on device
 
 <a name="Prerequisites"></a>
 # Step 1: Prerequisites
@@ -41,18 +34,23 @@ You should have the following items ready before beginning the process:
 -   [Prepare your development environment][setup-devbox-windows]
 -   [Setup your IoT hub][lnk-setup-iot-hub]
 -   [Provision your device and get its credentials][lnk-manage-iot-hub]
--   {enter your device name here} device.
--   {{Please specify if any other software(s) or hardware(s) are required.}}
+-   faytech-101J1900CAP device.
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
 
--   {{Write down the instructions required to setup, configure and connect your device. Please use external links when possible pointing to your own page with device preparation steps.}}
+-   Intsall the Windows 10 Pro on your device
+-	Install properly all the hardware drivers
+-	Download and install the [DeviceExplorer](https://github.com/Azure/azure-iot-sdk-csharp/blob/master/tools/DeviceExplorer/doc/how_to_use_device_explorer.md) 
+
+https://download.faytech.com/iothub/
 
 <a name="Build"></a>
 # Step 3: Build and Run the sample
 
 -   Download the [Azure IoT SDK](https://github.com/Azure/azure-iot-sdk-csharp) and the sample programs and save them to your local repository.
+-	Install the Visual Studio 2015 (you can also use the Visual Studio 2017).
+-	Navigate to the sample programs you downloaded already and open the  **iothub_csharp_client.sln** project file with your Visual Studio program.
 -   Open a device console (command prompt or a powershell window) and change to your local SDK **azure-iot-sdk-csharp** directory.
 
 -  Add the Iot Hub device connection string on your device as an environment variable:
@@ -65,20 +63,8 @@ You should have the following items ready before beginning the process:
         
 - From the device console, run the sample using following command:
 
-	**If HTTP protocol:**
-
 		cd iothub\device\samples\DeviceClientHttpSample\bin\Debug\netcoreapp2.0
 		dotnet DeviceClientHttpSample.dll
-
-	**If MQTT protocol:**
-
-		cd iothub\device\samples\DeviceClientMqttSample\bin\Debug\netcoreapp2.0
-		dotnet DeviceClientMqttSample.dll
-		
-	**If AMQP protocol:**
-
-		cd iothub\device\samples\DeviceClientAmqpSample\bin\Debug\netcoreapp2.0
-		dotnet DeviceClientAmqpSample.dll
 
 -   Use the **DeviceExplorer** utility to observe the messages IoT Hub receives from the **Device Client Sample** application.
 -   Refer "Monitor device-to-cloud events" in [DeviceExplorer Usage document](https://github.com/Azure/azure-iot-sdk-csharp/blob/master/tools/DeviceExplorer/doc/how_to_use_device_explorer.md) to see the data your device is sending.
