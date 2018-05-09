@@ -4,7 +4,7 @@ device: faytech-101J1900CAP
 language: csharp
 ---
 
-Run a simple Csharp sample on [faytech-101J1900CAP](https://www.faytech.com/catalogue/product/101-capacitive-touch-pc-ft101j1900w4g64gcap/) device running Win 10 Pro
+Run a simple Csharp sample on [faytech-101J1900CAP](https://www.faytech.com/catalogue/product/101-capacitive-touch-pc-ft101j1900w4g64gcap/) device running Windows 10 Pro
 ===
 ---
 
@@ -73,7 +73,7 @@ https://download.faytech.com/iothub/
 
 -	### Use the built **DeviceClientHttpSample.dll** program
 	-	Download the archive file `IoTHub_FAY101J1900CAP.rar` from [faytech's downloading space](https://download.faytech.com/iothub/) and extract the content.
-	-   Open a powershell window and change to your extracted repository using the command `cd`.
+	-   Open a powershell window and change to your extracted repository using the command `cd`
 	-	Run the command `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in order to enable executing Powershell scripts on your system.
 	-	Execute now the sample program by typing:
 		
