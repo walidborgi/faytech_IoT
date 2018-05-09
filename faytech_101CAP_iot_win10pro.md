@@ -1,6 +1,6 @@
 ---
-platform: {enter the OS name running on device}
-device: {enter your device name here}
+platform: Windows 10 Pro
+device: faytech-101J1900CAP
 language: csharp
 ---
 
