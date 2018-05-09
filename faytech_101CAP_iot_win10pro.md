@@ -47,7 +47,7 @@ https://download.faytech.com/iothub/
 
 <a name="Build"></a>
 # Step 3: Build and Run the sample
--	###Build from the source code
+-	### Build from the source code
 	-   Download the [Azure IoT SDK](https://github.com/Azure/azure-iot-sdk-csharp) and the sample programs and save them to your local repository.
 	-	Install the Visual Studio 2015 (you can also use the Visual Studio 2017).
 	-	Navigate to the sample programs you downloaded already and open the  **iothub_csharp_client.sln** project file with your Visual Studio program.
@@ -71,7 +71,7 @@ https://download.faytech.com/iothub/
 			cd iothub\device\samples\DeviceClientHttpSample\bin\Debug\netcoreapp2.0
 			dotnet DeviceClientHttpSample.dll <the_device_connexion_string_here>
 
--	###Use the built **DeviceClientHttpSample.dll** program
+-	### Use the built **DeviceClientHttpSample.dll** program
 	-	Download the archive file `IoTHub_FAY101J1900CAP.rar` from [faytech's downloading space](https://download.faytech.com/iothub/) and extract the content.
 	-   Open a powershell window and change to your extracted repository using the command `cd`.
 	-	Run the command `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in order to enable executing Powershell scripts on your system.
