@@ -51,12 +51,19 @@ https://download.faytech.com/iothub/
 -   Download the [Azure IoT SDK](https://github.com/Azure/azure-iot-sdk-csharp) and the sample programs and save them to your local repository.
 -	Install the Visual Studio 2015 (you can also use the Visual Studio 2017).
 -	Navigate to the sample programs you downloaded already and open the  **iothub_csharp_client.sln** project file with your Visual Studio program.
+-	When the project is loaded into your Visual Studio, open the **DeviceClientHttpSample** project, edit the **Program.cs** source file :
+	-	Comment the line number 17 
+	-	replace :
+	
+			DeviceClient deviceClient = DeviceClient.CreateFromConnectionString(DeviceConnectionString, TransportType.Http1)
+			
+		by:
+		
+			DeviceClient deviceClient = DeviceClient.CreateFromConnectionString(args[0], TransportType.Http1)
+			
+			
 -   Open a device console (command prompt or a powershell window) and change to your local SDK **azure-iot-sdk-csharp** directory.
--	Run the command `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in order to enable execting Powershell scripts on your system.
-
--  Add the Iot Hub device connection string on your device as an environment variable:
-
-		setx IOTHUB_DEVICE_CONN_STRING <yourDeviceConnectionString>
+-	Run the command `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned` in order to enable executing Powershell scripts on your system.
 
 -  Run the following command to build the SDK:
 
